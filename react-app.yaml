@@ -16,7 +16,7 @@ spec:
         - name: react-app
           image: 443576553363.dkr.ecr.us-west-1.amazonaws.com/movie-app-demo
           ports:
-            - containerPort: 3030  # Exposing port 3030 in the container
+            - containerPort: 3000  # Exposing port 3000 in the container
 ---
 apiVersion: v1
 kind: Service
@@ -28,11 +28,11 @@ spec:
     app: react-app
   ports:
     - name: http
-      port: 3030          # Service port for HTTP
-      targetPort: 3030    # Container port
+      port: 3000          # Service port for HTTP
+      targetPort: 3000    # Container port
       protocol: TCP        # Explicitly specifying TCP for HTTP
     - name: https
       port: 443           # Service port for HTTPS
-      targetPort: 3030    # Assuming your app still listens on port 3030
+      targetPort: 3000    # Assuming your app still listens on port 3000
       protocol: TCP        # Explicitly specifying TCP for HTTPS
 
