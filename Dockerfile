@@ -5,7 +5,7 @@ FROM node:18 AS build
 WORKDIR /app
 
 # Copy package.json and yarn.lock files
-COPY package.json yarn.lock ./
+COPY package.json ./
 
 # Install dependencies
 RUN npm install --frozen-lockfile
