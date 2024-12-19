@@ -3,7 +3,7 @@ name: Setup EKS, Deploy React App
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
