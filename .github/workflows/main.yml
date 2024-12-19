@@ -60,3 +60,7 @@ jobs:
     - name: Apply react-app deployment
       run: |
           kubectl apply -f react-app.yaml
+
+env:
+  ECR_REPOSITORY: movie-app-demo  # Update with your ECR repository name
+  IMAGE_TAG: latest
