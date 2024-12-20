@@ -51,11 +51,11 @@ jobs:
 
     - name: Create EKS Cluster
       run: |
-          eksctl create cluster --name movie-app-demo --region us-west-1 --nodegroup-name movie-app-demo-nodes --node-type t2.micro --nodes 5
+          eksctl create cluster --name movie-app-demo-new --region us-west-1 --nodegroup-name movie-app-demo-new-nodes --node-type t2.micro --nodes 5
       
     - name: Wait for Cluster to be Ready
       run: |
-          aws eks wait cluster-active --name movie-app-demo
+          aws eks wait cluster-active --name movie-app-demo-new
 
     - name: Apply react-app deployment
       run: |
