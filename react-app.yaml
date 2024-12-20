@@ -13,7 +13,7 @@ spec:
         app: movie-app-demo
     spec:
       containers:
-        - name: react-app
+        - name: movie-app-demo
           image: 443576553363.dkr.ecr.us-west-1.amazonaws.com/movie-app-demo
           ports:
             - containerPort: 3000  # Exposing port 3000 in the container
@@ -25,7 +25,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: react-app
+    app: movie-app-demo
   ports:
     - name: http
       port: 3000          # Service port for HTTP
